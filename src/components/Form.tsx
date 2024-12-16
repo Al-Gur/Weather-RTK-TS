@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {FormEvent, useState} from "react";
 import {getWeather} from "../features/api/weatherAction.ts";
 import {useAppDispatch} from "../app/hooks.ts";
 
