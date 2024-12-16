@@ -6,7 +6,7 @@ const Form = () => {
     const [city, setCity] = useState('');
     const dispatch = useAppDispatch();
 
-    const getCity = e => {
+    const getCity = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         dispatch(getWeather(city));
         setCity('');
