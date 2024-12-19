@@ -10,7 +10,7 @@ const weatherSlice = createSlice({
     reducers: {},
     extraReducers: builder => {
         builder
-            .addCase(getWeather.pending, () => dispatch(setMessage('Pending...'))
+            .addCase(getWeather.pending, () => dispatch(setMessage('Pending...')))
             .addCase(getWeather.fulfilled,
                         (_state, action) => {
                            dispatch(setMessage(''));
