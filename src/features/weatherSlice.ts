@@ -19,7 +19,9 @@ const weatherSlice = createSlice({
             .addCase(getWeather.rejected,
                         e => {
                             console.log(e);
-                            dispatch(setMessage('Enter correct city name'))
+                            if (e instanceof Error) {
+                                dispatch(setMessage('Enter correct city name'))
+                            }
                         })
     }
 })
